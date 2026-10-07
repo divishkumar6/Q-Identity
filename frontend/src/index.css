@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(228, 171, 61, 0.3) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(228, 171, 61, 0.3);
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-navy-800/60 backdrop-blur-md border border-white/5 rounded-2xl;
+  }
+  .glass-card-elevated {
+    @apply bg-navy-700/50 backdrop-blur-md border border-white/8 rounded-2xl shadow-lg;
+  }
+  .btn-primary {
+    @apply px-6 py-2.5 bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-gold-500/20;
+  }
+  .btn-secondary {
+    @apply px-6 py-2.5 bg-navy-700 hover:bg-navy-600 text-white font-medium rounded-xl border border-white/10 transition-all duration-200;
+  }
+  .btn-outline {
+    @apply px-6 py-2.5 border border-gold-500/30 hover:border-gold-500/60 text-gold-400 font-medium rounded-xl transition-all duration-200;
+  }
+  .btn-danger {
+    @apply px-6 py-2.5 bg-red-600/80 hover:bg-red-500 text-white font-medium rounded-xl transition-all duration-200;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 bg-navy-800/80 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/30 transition-all;
+  }
+  .badge-green {
+    @apply inline-flex items-center gap-1 px-3 py-1 bg-emerald-500/15 text-emerald-400 text-xs font-medium rounded-full border border-emerald-500/20;
+  }
+  .badge-gold {
+    @apply inline-flex items-center gap-1 px-3 py-1 bg-gold-500/15 text-gold-400 text-xs font-medium rounded-full border border-gold-500/20;
+  }
+  .badge-red {
+    @apply inline-flex items-center gap-1 px-3 py-1 bg-red-500/15 text-red-400 text-xs font-medium rounded-full border border-red-500/20;
+  }
+  .badge-blue {
+    @apply inline-flex items-center gap-1 px-3 py-1 bg-blue-500/15 text-blue-400 text-xs font-medium rounded-full border border-blue-500/20;
+  }
+  .stat-value {
+    @apply text-3xl font-display font-bold text-white;
+  }
+  .stat-label {
+    @apply text-sm text-gray-400 font-medium;
+  }
+}
